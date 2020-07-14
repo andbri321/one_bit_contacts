@@ -14,8 +14,7 @@ describe "get all contacts route", :type => :request do
     end
 
     it 'returns all contacts' do
-        expect(response.body).to eq(20)
-        # expect(JSON.parse(response.body).size).to eq(20)
+        expect(JSON.parse(response.body).size).to eq(20)
     end
     it 'returns status code 200' do
         expect(response).to have_http_status(:success)

@@ -4,9 +4,9 @@ class Api::V1::ContactsController < Api::V1::ApiController
     before_action :require_authorization!, only: [:show, :update, :destroy]    
     # GET /api/v1/contacts
     
-    def index    
+    def index
       @contacts = current_user.contacts
-      render json: @contacts    
+      render json: @contacts
     end
     
     # GET /api/v1/contacts/1
